@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+    margin: 0;
+    background-image: linear-gradient(rgba(11, 10, 10, 0.452), rgba(12, 12, 12, 0.712)), url(./images/bag.jpeg);
+    background-position: left;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*-----------------------HERO-NAVBAR----------------------*/
+
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Text styles */
+    text-align: center;
+    color: rgb(208, 203, 203);
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.571), rgba(9, 9, 9, 0.336)), url(./images/navbar-coffee.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 10em;
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+input {
+    display: block;
+    width: 200px;
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    background-color: rgb(208, 203, 203);
+}
+
+#search-button {
+    border: 3px solid rgb(208, 203, 203);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: block;
+    width: 229px;
+    padding: 1em;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    color: rgb(125, 108, 85);
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(9, 9, 9, 0.336)), url(./images/wood-body.jpeg);
+    overflow-y: hidden;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 60px;
+    color: rgb(208, 203, 203);
+    display: block;
+    transition: 0.3s;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-weight: bolder;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: rgb(125, 108, 85);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.burger {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 10px;
+    color: rgb(208, 203, 203);
+    justify-content: flex-start;
+}
+
+.burger:hover {
+    color: rgb(125, 108, 85);
+}
+
+.burger h1 {
+    text-align: center;
+}
+
+
+/*------------------ANIMATION-----------------------*/
+
+.textanimation {
+    font-size: 30px;
+    color: rgb(208, 203, 203);
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+/*------------------------GRID-CONTAINER---------------------*/
+
+.grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto);
+    grid-template-areas: "Text-first-section Text-first-section Text-first-section" "wrapper wrapper wrapper" "Text-second-section Text-second-section Text-second-section" "cardsteam cardsteam cardsteam" "start-frame1 start-frame1 start-frame1" "coffee-header coffee-header coffee-header" "coffee-medium coffee-medium coffee-medium";
+}
+
+
+/*------------------------Text-first-section--&---Text-second-section----------------------*/
+
+.Text-first-section,
+.Text-second-section {
+    margin-top: 300px;
+    padding-left: 350px;
+    padding-right: 350px;
+    text-align: center;
+    color: rgb(208, 203, 203);
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+.Text-first-section h1,
+.Text-second-section h1 {
+    font-size: 60px;
+}
+
+.Text-first-section p,
+.Text-second-section p {
+    font-size: 20px;
+}
+
+
+/*---------------------WRAPPER------------------------__*/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 3px solid rgb(125, 108, 85);
+    margin-top: 300px;
+}
+
+.item1 {
+    grid-row: 1 / 3;
+    background-color: #919393;
+    flex-direction: column;
+    display: flex;
+}
+
+.item1 img {
+    object-fit: cover;
+}
+
+.item2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./images/wood-body.jpeg);
+    border: 1px solid rgb(125, 108, 85);
+}
+
+.item2>h2 {
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin: 0;
+    color: rgb(125, 108, 85);
+}
+
+.item2 p {
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    line-height: 13px;
+    text-align: center;
+    color: rgb(125, 108, 85);
+}
+
+.item3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./images/wood-body.jpeg);
+    border: 1px solid rgb(125, 108, 85);
+}
+
+.item3>p {
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    line-height: 13px;
+    text-align: center;
+    color: rgb(125, 108, 85);
+}
+
+.item3>h2 {
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 41px;
+    text-align: center;
+    margin: 0;
+    color: rgb(125, 108, 85);
+}
+
+
+/*------------------CARD-STEAM-----------------------*/
+
+.grid-container .cardsteam {
+    grid-area: cardsteam;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12rem;
+    flex-direction: row;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+    margin-top: 300px;
+}
+
+.grid-container .cardsteam article {
+    background: linear-gradient(rgba(0, 0, 0, 0.692), rgba(9, 9, 9, 0.685)), url(./images/wood-body.jpeg);
+    border-radius: .3rem;
+    margin: 2rem .6rem;
+    padding: .5rem;
+    max-width: 15rem;
+    box-shadow: 0px 4px 4px rgb( 0, 0, 0, 0.1);
+    transform-origin: center;
+    text-align: center;
+    align-self: center;
+    transition: all 1s ease;
+    margin: .6rem;
+}
+
+.grid-container .cardsteam article header {
+    width: 100%;
+    height: 15rem;
+    border-radius: 0.3rem;
+    transform: translateY(-1.5rem);
+}
+
+.grid-container .cardsteam article header.Cleoportrait {
+    background: url(./images/coffee-label1.jpg) no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.grid-container .cardsteam article header.Amandaportrait {
+    background: url(./images/coffee-label2.jpg) no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.grid-container .cardsteam article header.Blakeportrait {
+    background: url(./images/labelnu.jpg) no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.grid-container .cardsteam article p {
+    color: rgb(125, 108, 85);
+    font-size: 1rem;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+.grid-container .cardsteam article h1 {
+    font-size: 2rem;
+    color: rgb(125, 108, 85);
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+.grid-container .cardsteam article:hover {
+    transform: scale(1.1);
+}
+
+.grid-container .cardsteam article p button {
+    border: 3px solid rgb(208, 203, 203);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: rgb(125, 108, 85);
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 13px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    margin-bottom: 56px;
+    font-weight: bold;
+}
+
+
+/*---------------COFFEE-ANIMATION------------------_*/
+
+.container {
+    margin-top: 300px;
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    left: calc(50% - 150px);
+}
+
+.coffee-header {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(22, 20, 20);
+    border-radius: 10px;
+}
+
+.coffee-header__buttons {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 25px;
+    background-color: #282323;
+    border-radius: 50%;
+}
+
+.coffee-header__buttons::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - 4px);
+    background-color: #615e5e;
+}
+
+.coffee-header__button-one {
+    left: 15px;
+}
+
+.coffee-header__button-two {
+    left: 50px;
+}
+
+.coffee-header__display {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    border-radius: 50%;
+    background-color: #b6b8b8;
+    border: 5px solid #f6f7f6;
+    box-sizing: border-box;
+}
+
+.coffee-header__details {
+    width: 8px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #9b9091;
+    box-shadow: -12px 0 0 #9b9091, -24px 0 0 #9b9091;
+}
+
+.coffee-medium {
+    width: 90%;
+    height: 160px;
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 45%);
+    background-color: #bcb0af;
+}
+
+.coffee-medium:before {
+    content: "";
+    width: 90%;
+    height: 100px;
+    background-color: #776f6e;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 45%);
+    border-radius: 20px 20px 0 0;
+}
+
+.coffe-medium__exit {
+    width: 60px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 30px);
+    background-color: #231f20;
+}
+
+.coffe-medium__exit::before {
+    content: "";
+    width: 50px;
+    height: 20px;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 25px);
+    background-color: #231f20;
+}
+
+.coffe-medium__exit::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -30px;
+    left: calc(50% - 5px);
+    background-color: #231f20;
+}
+
+.coffee-medium__arm {
+    width: 70px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background-color: #231f20;
+}
+
+.coffee-medium__arm::before {
+    content: "";
+    width: 15px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: -15px;
+    background-color: #9e9495;
+}
+
+.coffee-medium__cup {
+    width: 80px;
+    height: 47px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 40px);
+    background-color: #FFF;
+    border-radius: 0 0 70px 70px / 0 0 110px 110px;
+}
+
+.coffee-medium__cup::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 6px;
+    right: -13px;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+}
+
+@keyframes liquid {
+    0% {
+        height: 0px;
+        opacity: 1;
+    }
+    5% {
+        height: 0px;
+        opacity: 1;
+    }
+    20% {
+        height: 62px;
+        opacity: 1;
+    }
+    95% {
+        height: 62px;
+        opacity: 1;
+    }
+    100% {
+        height: 62px;
+        opacity: 0;
+    }
+}
+
+.coffee-medium__liquid {
+    width: 6px;
+    height: 63px;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 3px);
+    background-color: #74372b;
+    animation: liquid 4s 4s linear infinite;
+}
+
+.coffee-medium__smoke {
+    width: 8px;
+    height: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #b3aeae;
+}
+
+@keyframes smokeOne {
+    0% {
+        bottom: 20px;
+        opacity: 0;
+    }
+    40% {
+        bottom: 50px;
+        opacity: .5;
+    }
+    80% {
+        bottom: 80px;
+        opacity: .3;
+    }
+    100% {
+        bottom: 80px;
+        opacity: 0;
+    }
+}
+
+@keyframes smokeTwo {
+    0% {
+        bottom: 40px;
+        opacity: 0;
+    }
+    40% {
+        bottom: 70px;
+        opacity: .5;
+    }
+    80% {
+        bottom: 80px;
+        opacity: .3;
+    }
+    100% {
+        bottom: 80px;
+        opacity: 0;
+    }
+}
+
+.coffee-medium__smoke-one {
+    opacity: 0;
+    bottom: 50px;
+    left: 102px;
+    animation: smokeOne 3s 4s linear infinite;
+}
+
+.coffee-medium__smoke-two {
+    opacity: 0;
+    bottom: 70px;
+    left: 118px;
+    animation: smokeTwo 3s 5s linear infinite;
+}
+
+.coffee-medium__smoke-three {
+    opacity: 0;
+    bottom: 65px;
+    right: 118px;
+    animation: smokeTwo 3s 6s linear infinite;
+}
+
+.coffee-medium__smoke-for {
+    opacity: 0;
+    bottom: 50px;
+    right: 102px;
+    animation: smokeOne 3s 5s linear infinite;
+}
+
+.coffee-footer {
+    width: 95%;
+    height: 15px;
+    position: absolute;
+    bottom: 25px;
+    left: calc(50% - 47.5%);
+    background-color: #212222;
+    border-radius: 10px;
+}
+
+.coffee-footer::after {
+    content: "";
+    width: 106%;
+    height: 26px;
+    position: absolute;
+    bottom: -25px;
+    left: -8px;
+    background-color: #000;
+}
+
+
+/*-----------------------COFFEE-GAME---GENERAL-STYLING------------------*/
+
+#game-coffee {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.571), rgba(9, 9, 9, 0.336)), url(./images/brown-text.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(208, 203, 203);
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    font-size: 40px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.img-game {
+    margin-bottom: 80px;
+}
+
+
+/*-------------------START-FRAME-------------------------*/
+
+#start-frame {
+    text-align: center;
+}
+
+#game-name {
+    font-size: 65px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+#instructions-heading {
+    font-size: 20px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+#instructions-text,
+li {
+    font-size: 50px;
+    font-family: 'VT323', monospace;
+}
+
+
+/* Styling for all buttons */
+
+#play-again-btn2,
+#play-again-btn,
+#start-button,
+#go-back-btn {
+    border: 3px solid rgb(208, 203, 203);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: block;
+    width: 200px;
+    padding: 1em;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+#go-home-btn {
+    border: 3px solid rgb(208, 203, 203);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: block;
+    width: 86px;
+    padding: 6px;
+    /* margin-top: 7px; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 29px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 80px;
+}
+
+#start-button:hover,
+#go-back-btn:hover,
+#go-home-btn:hover,
+#play-again-btn:hover,
+#play-again-btn2:hover {
+    color: rgb(125, 108, 85);
+}
+
+
+/*----------------------------THE-GAME----------------------------------------*/
+
+#game-container {
+    display: grid;
+    grid-template-areas: "fig shown-word" "fig wrong-guesses" "fig point-counter";
+}
+
+#shown-word {
+    grid-area: shown-word;
+}
+
+#wrong-guesses {
+    grid-area: wrong-guesses;
+}
+
+#point-counter {
+    grid-area: point-counter;
+    margin-left: 2.5rem;
+}
+
+#hangman {
+    stroke: rgb(245, 243, 243);
+    stroke-width: 5px;
+    grid-area: fig;
+}
+
+
+/* This is because some parts of the figure were double lined */
+
+.thinner {
+    stroke-width: 2px;
+    fill: white;
+}
+
+
+/*-------------------------POP-UP-------------------------------------_*/
+
+#lose-popup {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.571), rgba(9, 9, 9, 0.336)), url(./images/wood-body.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+#lose-popup h1 {
+    font-size: 150px;
+    text-decoration-style: wavy;
+    margin-top: 30px;
+    margin-bottom: 2px;
+    font-family: 'VT323', monospace;
+}
+
+#lose-popup p {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#lose-popup p#the-word-was {
+    font-size: 75px;
+    margin-bottom: 2rem;
+}
+
+#lose-popup button {
+    margin-top: 50px;
+}
+
+#win-popup {
+    background: url(https://i.pinimg.com/originals/07/2f/84/072f842c6bb3f6966ac508d28f14cdd0.gif) center;
+    background-size: cover;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    top: 20%;
+    width: 20%;
+    left: 40%;
+}
+
+.notification-container {
+    background-color: rgb(125, 108, 85);
+    border-radius: 1rem 1rem 0 0;
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: -160px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.notification-container p {
+    margin: 0;
+    color: white;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+.notification-container.show {
+    transform: translateY(-160px);
+}
+
+
+/*----------------------------TEXT-STYLING------------------------------------------*/
+
+#game-name,
+#instructions-heading,
+#instructions-text {
+    text-align: center;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    letter-spacing: 1px;
+}
+
+#instructions-text {
+    font-size: 20px;
+}
+
+#instructions-heading {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+#game-name {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    flex-direction: row;
+}
+
+
+/*---------------------------DISPLAY-NONE------------------------------------------*/
+
+
+/* This is placed at the bottom to override previous styling when toggled on in JavaScript */
+
+.hide {
+    display: none;
+}
